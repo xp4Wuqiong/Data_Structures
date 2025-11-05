@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",  // 配置名称，可以自定义，比如改成"My C Config"
+            "includePath": [
+                // 告诉VS Code在哪些路径中查找头文件
+                // "${workspaceFolder}/**" 表示搜索整个工作文件夹及其所有子文件夹
+                // 只搜索 Sequential_List 子文件夹
+                "${workspaceFolder}/Linked_List/**"
+            ],
+            "defines": [
+                // 预定义的宏，相当于在代码开头写 #define _DEBUG 等
+                "_DEBUG",     // 定义调试模式，某些库会根据这个提供调试功能
+                "UNICODE",    // 使用Unicode字符集（Windows相关）
+                "_UNICODE"    // 使用Unicode字符集（C运行时库相关）
+            ],
+            "windowsSdkVersion": "10.0.22621.0",  // Windows SDK版本号，保持默认即可
+            "compilerPath": "D:/Jing_software/x86_64-15.2.0-release-posix-seh-ucrt-rt_v13-rev0/mingw64/bin/gcc.exe",  // GCC编译器完整路径，这样VS Code就知道如何解析代码
+            "cStandard": "c17",        // 使用的C语言标准：C17
+            "cppStandard": "c++17",    // 使用的C++语言标准：C++17（即使你只写C代码也保留）
+            "intelliSenseMode": "windows-gcc-x64"  // IntelliSense模式：Windows系统 + GCC编译器 + 64位架构
+        }
+    ],
+    "version": 4  // 配置文件的版本号，固定为4，不要修改
+}
