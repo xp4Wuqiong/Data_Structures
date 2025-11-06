@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build all C files",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${workspaceFolder}/Linked_List/main.c",
+                "${workspaceFolder}/Linked_List/Singly_Linked_List.c",
+                "-o",
+                "${workspaceFolder}/Linked_List/main.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/Linked_List/"
+            },
+            "detail": "编译所有C文件生成可执行程序"
+        }
+    ]
+}

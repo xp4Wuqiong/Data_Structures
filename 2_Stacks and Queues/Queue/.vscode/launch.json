@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch main.exe",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Linked_List/main.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/Linked_List/",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:/Jing_software/x86_64-15.2.0-release-posix-seh-ucrt-rt_v13-rev0/mingw64/bin/gdb.exe",
+            "preLaunchTask": "build all C files"
+        }
+    ]
+}

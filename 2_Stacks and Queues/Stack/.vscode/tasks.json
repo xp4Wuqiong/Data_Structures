@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build all C files",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${workspaceFolder}/Sequential_Stack/main.c",
+                "${workspaceFolder}/Sequential_Stack/Sequential_Stack.c",
+                "${workspaceFolder}/Sequential_Stack/Applications_of_Sequential_Stack.c",
+                "-o",
+                "${workspaceFolder}/Sequential_Stack/main.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/Sequential_Stack/"
+            },
+            "detail": "编译所有C文件生成可执行程序"
+        }
+    ]
+}
