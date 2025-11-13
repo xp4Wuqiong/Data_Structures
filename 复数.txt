@@ -1,0 +1,78 @@
+#include <iostream>
+using namespace std;//打开cout
+/*
+结构体类型:实部和虚部
+*/
+typedef struct
+{
+    float realpart;
+    float imagpart;
+}complex;
+/*
+给复数Z的的实部和虚部赋值
+*/
+void Assign(complex& Z, float v1, float v2)
+{
+    Z.realpart = v1;
+    Z.imagpart = v2;
+}
+/*
+销毁复数Z的值
+*/
+void Destroy(complex& Z)
+{
+    Z.imagpart = 0;
+    Z.realpart = 0;
+}
+/*
+获取复数Z的实数部分
+*/
+void GetReal(complex Z, float& realPart)
+{
+    realPart = Z.realpart;
+}
+/*
+获取复数Z的虚数部分
+*/
+void GetImag(complex Z, float& ImagPart)
+{
+    ImagPart = Z.imagpart;
+}
+/*
+将两个复数的实数部分和虚数部分，分别相加
+*/
+void ADD(complex z1, complex z2, complex& sum)
+{
+    sum.realpart = z1.realpart + z2.realpart;
+    sum.imagpart = z1.imagpart + z2.imagpart;
+}
+int main()
+{
+    complex s1, s2, s;
+    float shishu, xushu;
+    //赋值
+    Assign(s1, 1.1, 1.2);
+    Assign(s2, 1.3, 1.4);
+    //算和
+    ADD(s1, s2, s);
+
+    //分别取出实数部分和虚数部分
+    GetReal(s,shishu);
+    GetImag(s, xushu);
+    cout << "s1+s2=" << shishu << "+" << xushu << "i\n";
+    Destroy(s);
+    
+    GetReal(s1,shishu);
+    GetImag(s1, xushu);
+    cout << "s1=" << shishu << "+" << xushu << "i\n";
+    Destroy(s1);
+
+    GetReal(s2, shishu);
+    GetImag(s2, xushu);
+    cout << "s2=" << shishu << "+" << xushu << "i\n";
+
+    
+}
+     
+
+
